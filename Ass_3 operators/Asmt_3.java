@@ -46,6 +46,36 @@ public class Asmt_3{
 
 
 
+
+        // Q4 - Assign values of variables 'a' and 'b' as 55 and 70 respectively and then check if:
+        // i) both the conditions 'a < 50' and 'a < b' are true.
+        // ii) at least one of the conditions 'a < 50' or 'a < b' is true.
+
+        // int a = 55,  b = 70;  // variables can be assigned like this also.
+        // System.out.println(a < 50 && a < b);  // flse
+        // System.out.println(a < 50  ||  a < b); //True
+
+
+
+
+
+// Q5 - Find the total number of bits needed to be flipped to convert x to y.
+// Input: 65 80
+// Output: 2
+// counting set bits
+// The idea is to take XOR of the given two integers. After calculating the XOR, the problem will reduce to
+// counting set bits in the XOR output using Brian Kernighan algorithm.
+
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            int n = a ^ b;
+            int count = 0;
+            while (n != 0){
+                n = n & (n - 1);
+                count++;
+            }
+            System.out.println(count);
+
         
  
         
